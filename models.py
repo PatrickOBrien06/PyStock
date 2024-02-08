@@ -2,8 +2,8 @@ class InventoryManager:
   def __init__(self):
     self.inventory = {}
 
-  def add_item(self, item_name, quantity):
-    self.inventory[item_name] = quantity
+  def add_item(self, item_name, quantity, cost, place):
+    self.inventory[item_name] = [quantity, cost, place]
 
   def bimi_item(self, item_name, quantity):
     if item_name in self.inventory:
@@ -20,5 +20,5 @@ class InventoryManager:
 
   def display(self):
     print("Current Inventory: ")
-    for item, quantity in self.inventory.items():
-      print(f"{item}: {quantity}")   
+    for item, quality in self.inventory.items():
+      print(f"{item}\n Quantity     {quality[0]}\n Cost         {quality[1]}\n Aisle        {quality[2]}")   

@@ -9,14 +9,16 @@ while start.lower() != "q":
 
   if operation == "a":
     quantity = input("Enter the item quantity: ")
-    inventory_manager.add_item(item, quantity)
+    cost = input("Enter the item cost: ")
+    place = input("Enter the item aisle: ")
+    inventory_manager.add_item(item, quantity, cost, place)
     inventory_manager.display()
 
   elif operation == "b":
     if item in inventory_manager.inventory:
-      quantity = input("Enter the item quantity: ")
+      quantity = input("Enter ")
       inventory_manager.bimi_item(item, quantity)
       inventory_manager.display()
     else: 
-      print("Item not in inventory!")
+      print("Item not in inventory")
 
